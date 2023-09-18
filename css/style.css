@@ -1,4 +1,4 @@
-/* ===================== GOOGLE FONTS ==================== */
+/*==================== GOOGLE FONTS ====================*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap");
 
 /* =========== BASE ============ */
@@ -97,11 +97,12 @@ body {
   align-items: center;
 }
 
+
 /* ==========================SOBRE======================-=== */
 .sobre__container {
   text-align: center;
   width: 100%;
-  /* height: 62rem; */ /* Remove fixed height */
+  height: 62rem;
 }
 
 .sobre__titulo {
@@ -113,28 +114,28 @@ body {
 .sobre__paragrafo {
   font-weight: 300;
   font-size: 1em;
-  padding: 1rem 2rem; /* Adjust padding */
-  /* width: 100%; */ /* Remove fixed width */
-  /* height: 200px; */ /* Remove fixed height */
+  padding: 1rem 12rem 4rem 12rem;
+  width: 100%;
+  height: 200px;
   text-align: justify;
 }
 
 .article__container {
-  padding: 0 2rem; /* Adjust padding */
+  padding: 0 4rem 0 4rem;
 }
 
 /* ==========================NOTICIAS======================-=== */
 .noticias__container {
   width: 100%;
-  /* height: 62rem; */ /* Remove fixed height */
+  height: 62rem;
   padding-top: 2rem;
 }
 
 .noticias__header {
   margin-bottom: 30px;
   width: 100%;
-  /* height: 6.5em; */ /* Remove fixed height */
-  padding: 0 2rem; /* Adjust padding */
+  height: 6.5em;
+  padding: 0 5em 0 5em ;
   box-shadow: 0 5px 40px rgba(0, 0, 0, .2);
   border: none;
   border-radius: 4px;
@@ -145,7 +146,7 @@ body {
 
 .noticias__barra {
   gap: 16px;
-  /* height: 5em; */ /* Remove fixed height */
+  height: 5em;
 }
 
 .noticias__barra h1 {
@@ -154,62 +155,63 @@ body {
   font-size: 24px;
   line-height: 25px;
   color: #000;
-  /* padding-top: 15px; */ /* Remove padding */
+  padding-top: 15px;
   position: relative;
-  /* padding-top: 3.5rem; */ /* Remove padding */
+  padding-top: 3.5rem;
 }
 
 .noticias__cards {
   display: flex;
   width: 100%;
-  /* height: 12.5em; */ /* Remove fixed height */
-  padding: 0 1rem; /* Adjust padding */
-  gap: 1rem; /* Adjust gap */
+  height: 12.5em;
+  padding: 0 10em 0 10em;
+  gap: 3rem;
 }
 
 .noticias__cards img {
   width: 100%;
-  height: auto; /* Allow the image to scale proportionally */
+  height: 10em;
   border-radius: 5px;
   box-shadow: 0 5px 40px rgba(0, 0, 0, .2);
 }
 
 .noticias__cards h1 {
-  /* padding-top: 1em; */ /* Remove padding */
+  padding-top: 1em;
   font-size: 20px;
   font-weight: 500;
   color: #2c2c2c;
 }
 
 .noticias__cards p {
-  /* padding-top: 1em; */ /* Remove padding */
+  padding-top: 1em;
   font-size: 16px;
   font-weight: 300;
   color: #2c2c2c;
 }
 
 .noticias__cards a {
-  cursor: pointer; /* Change to pointer on hover */
+  cursor: default;
 }
 
 .noticias__cards a:hover {
   filter: brightness(90%);
 }
 
-.noticias__descricao a {
+.noticias__descricao a{
   text-decoration: none;
 }
-
 .noticias__descricao a:hover {
-  opacity: 0.9; /* Adjust opacity on hover */
+  opacity: 90%;
 }
+
 
 /* ==========================MOEDAS======================-=== */
 .moedas__container {
   width: 100%;
-  /* height: 62rem; */ /* Remove fixed height */
+  height: 62rem;
   text-align: center;
 }
+
 
 .moedas__descricao {
   text-transform: uppercase;
@@ -217,6 +219,21 @@ body {
   font-size: 3.5rem;
   padding: 0.5em;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .copy {
   margin: 0;
@@ -229,6 +246,7 @@ body {
 .copy i {
   font-size: 2rem;
   color: #F2EcFF;
+
 }
 
 .copy a {
@@ -240,52 +258,133 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* height: 20rem; */ /* Remove fixed height */
+  height: 20rem;
   background-color: rgba(0, 0, 0, 0.959);
   display: flex;
-}
-
-/* Media queries for responsiveness */
-
-@media screen and (max-width: 768px) {
+} 
+/* Tamanho de tela pequeno (celulares) */
+@media only screen and (max-width: 600px) {
   .header__nav {
-    padding: 1rem 2rem; /* Adjust padding for smaller screens */
+    padding: 1rem 1rem 1rem 1rem; /* Reduza o espaçamento para telas menores */
+  }
+
+  .logo {
+    width: 50%; /* Reduza o tamanho do logotipo para telas menores */
+  }
+
+  .nav__menu {
+    flex-direction: column; /* Coloque os itens do menu verticalmente para telas menores */
+    align-items: center; /* Centralize os itens do menu */
+    background-color: #44D4AC; /* Adicione uma cor de fundo para destacar o menu */
+    position: absolute;
+    top: 60px; /* Ajuste o posicionamento do menu para evitar sobreposição */
+    left: 0;
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+    transform: scaleY(0); /* Inicialmente, esconda o menu */
+    transform-origin: top center;
+    z-index: 1;
+  }
+
+  .nav__menu.active {
+    transform: scaleY(1); /* Exiba o menu quando ativo */
   }
 
   .nav__menu a {
-    font-size: 1rem; /* Adjust font size for smaller screens */
-  }
-
-  .sobre__paragrafo {
-    padding: 1rem; /* Adjust padding for smaller screens */
-  }
-
-  .article__container {
-    padding: 0 1rem; /* Adjust padding for smaller screens */
+    font-size: 1rem;
+    margin-top: 10px;
+    padding: 10px; /* Adicione espaço ao redor dos itens do menu */
   }
 
   .noticias__header {
-    padding: 0 1rem; /* Adjust padding for smaller screens */
-  }
-
-  .noticias__barra h1 {
-    font-size: 20px; /* Adjust font size for smaller screens */
+    padding: 0 1rem; /* Reduza o espaçamento para telas menores */
   }
 
   .noticias__cards {
-    padding: 0 0.5rem; /* Adjust padding for smaller screens */
+    padding: 0 1rem; /* Reduza o espaçamento para telas menores */
+    flex-direction: column; /* Coloque os cartões das notícias verticalmente para telas menores */
+    align-items: center; /* Centralize os cartões das notícias */
+  }
+
+  .noticias__cards img {
+    width: 100%; /* Faça as imagens das notícias ocuparem a largura total */
+    height: auto; /* Mantenha a proporção da imagem */
   }
 
   .noticias__cards h1 {
-    font-size: 18px; /* Adjust font size for smaller screens */
+    font-size: 1rem; /* Reduza o tamanho da fonte das manchetes */
   }
 
   .noticias__cards p {
-    font-size: 14px; /* Adjust font size for smaller screens */
+    font-size: 0.9rem; /* Reduza o tamanho da fonte do texto das notícias */
   }
 
   .moedas__container {
-    /* No need to make changes for smaller screens */
+    padding: 1rem; /* Adicione espaço ao redor do contêiner de cotações de moedas */
+  }
+}
+
+/* Tamanho de tela médio (tablets) */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .header__nav {
+    padding: 1rem 2rem 1rem 2rem; /* Ajuste o espaçamento para telas médias */
+  }
+
+  .logo {
+    width: 25%; /* Reduza o tamanho do logotipo para telas médias */
+  }
+
+  .nav__menu a {
+    font-size: 1rem; /* Mantenha o tamanho da fonte do menu para telas médias */
+    margin-top: 20px;
+    padding: 10px; /* Adicione espaço ao redor dos itens do menu */
+  }
+
+  .noticias__header {
+    padding: 0 2rem; /* Ajuste o espaçamento para telas médias */
+  }
+
+  .noticias__cards {
+    padding: 0 2rem; /* Ajuste o espaçamento para telas médias */
+  }
+
+  .moedas__container {
+    padding: 1rem 2rem; /* Adicione espaço ao redor do contêiner de cotações de moedas */
+  }
+}
+
+/* Tamanho de tela grande (notebooks e desktops) */
+@media only screen and (min-width: 1025px) {
+  .header__nav {
+    padding: 1rem 7rem 7rem 7rem; /* Mantenha o espaçamento para telas maiores */
+  }
+
+  .logo {
+    width: 14%; /* Mantenha o tamanho do logotipo para telas maiores */
+  }
+
+  .nav__menu {
+    flex-direction: row; /* Coloque os itens do menu horizontalmente para telas maiores */
+    background-color: transparent; /* Remova a cor de fundo do menu */
+    position: initial;
+    top: initial;
+    transform: scaleY(1); /* Exiba o menu horizontalmente */
+  }
+
+  .nav__menu a {
+    font-size: 1.1rem; /* Mantenha o tamanho da fonte do menu para telas maiores */
+  }
+
+  .noticias__header {
+    padding: 0 5em; /* Mantenha o espaçamento para telas maiores */
+  }
+
+  .noticias__cards {
+    padding: 0 10em; /* Mantenha o espaçamento para telas maiores */
+  }
+
+  .moedas__container {
+    text-align: center; /* Mantenha o alinhamento original para telas maiores */
   }
 }
 
