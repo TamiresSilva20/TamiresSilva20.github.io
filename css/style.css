@@ -1,4 +1,4 @@
-/*==================== GOOGLE FONTS ====================*/
+/* ===================== GOOGLE FONTS ==================== */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap");
 
 /* =========== BASE ============ */
@@ -97,6 +97,199 @@ body {
   align-items: center;
 }
 
+/* ==========================SOBRE======================-=== */
+.sobre__container {
+  text-align: center;
+  width: 100%;
+  /* height: 62rem; */ /* Remove fixed height */
+}
+
+.sobre__titulo {
+  font-weight: 500;
+  font-size: 3.5rem;
+  padding: 0.5em;
+}
+
+.sobre__paragrafo {
+  font-weight: 300;
+  font-size: 1em;
+  padding: 1rem 2rem; /* Adjust padding */
+  /* width: 100%; */ /* Remove fixed width */
+  /* height: 200px; */ /* Remove fixed height */
+  text-align: justify;
+}
+
+.article__container {
+  padding: 0 2rem; /* Adjust padding */
+}
+
+/* ==========================NOTICIAS======================-=== */
+.noticias__container {
+  width: 100%;
+  /* height: 62rem; */ /* Remove fixed height */
+  padding-top: 2rem;
+}
+
+.noticias__header {
+  margin-bottom: 30px;
+  width: 100%;
+  /* height: 6.5em; */ /* Remove fixed height */
+  padding: 0 2rem; /* Adjust padding */
+  box-shadow: 0 5px 40px rgba(0, 0, 0, .2);
+  border: none;
+  border-radius: 4px;
+  margin-top: -30px;
+  background: #e9e9e9;
+  z-index: 1;
+}
+
+.noticias__barra {
+  gap: 16px;
+  /* height: 5em; */ /* Remove fixed height */
+}
+
+.noticias__barra h1 {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 25px;
+  color: #000;
+  /* padding-top: 15px; */ /* Remove padding */
+  position: relative;
+  /* padding-top: 3.5rem; */ /* Remove padding */
+}
+
+.noticias__cards {
+  display: flex;
+  width: 100%;
+  /* height: 12.5em; */ /* Remove fixed height */
+  padding: 0 1rem; /* Adjust padding */
+  gap: 1rem; /* Adjust gap */
+}
+
+.noticias__cards img {
+  width: 100%;
+  height: auto; /* Allow the image to scale proportionally */
+  border-radius: 5px;
+  box-shadow: 0 5px 40px rgba(0, 0, 0, .2);
+}
+
+.noticias__cards h1 {
+  /* padding-top: 1em; */ /* Remove padding */
+  font-size: 20px;
+  font-weight: 500;
+  color: #2c2c2c;
+}
+
+.noticias__cards p {
+  /* padding-top: 1em; */ /* Remove padding */
+  font-size: 16px;
+  font-weight: 300;
+  color: #2c2c2c;
+}
+
+.noticias__cards a {
+  cursor: pointer; /* Change to pointer on hover */
+}
+
+.noticias__cards a:hover {
+  filter: brightness(90%);
+}
+
+.noticias__descricao a {
+  text-decoration: none;
+}
+
+.noticias__descricao a:hover {
+  opacity: 0.9; /* Adjust opacity on hover */
+}
+
+/* ==========================MOEDAS======================-=== */
+.moedas__container {
+  width: 100%;
+  /* height: 62rem; */ /* Remove fixed height */
+  text-align: center;
+}
+
+.moedas__descricao {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 3.5rem;
+  padding: 0.5em;
+}
+
+.copy {
+  margin: 0;
+  font-size: 16px;
+  color: #F2EcFF;
+  align-items: start;
+  justify-content: start;
+}
+
+.copy i {
+  font-size: 2rem;
+  color: #F2EcFF;
+}
+
+.copy a {
+  text-decoration: none;
+}
+
+.footer__site {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* height: 20rem; */ /* Remove fixed height */
+  background-color: rgba(0, 0, 0, 0.959);
+  display: flex;
+}
+
+/* Media queries for responsiveness */
+
+@media screen and (max-width: 768px) {
+  .header__nav {
+    padding: 1rem 2rem; /* Adjust padding for smaller screens */
+  }
+
+  .nav__menu a {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+
+  .sobre__paragrafo {
+    padding: 1rem; /* Adjust padding for smaller screens */
+  }
+
+  .article__container {
+    padding: 0 1rem; /* Adjust padding for smaller screens */
+  }
+
+  .noticias__header {
+    padding: 0 1rem; /* Adjust padding for smaller screens */
+  }
+
+  .noticias__barra h1 {
+    font-size: 20px; /* Adjust font size for smaller screens */
+  }
+
+  .noticias__cards {
+    padding: 0 0.5rem; /* Adjust padding for smaller screens */
+  }
+
+  .noticias__cards h1 {
+    font-size: 18px; /* Adjust font size for smaller screens */
+  }
+
+  .noticias__cards p {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+
+  .moedas__container {
+    /* No need to make changes for smaller screens */
+  }
+}
+
+
 /* ===================DICAS e CARDS ======================== */
 /* .dicas {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
@@ -186,168 +379,3 @@ body {
 
 
 /* ================================ SOBRE ======================= */
-
-/* ==========================SOBRE======================-=== */
-.sobre__container {
-  text-align: center;
-  width: 100%;
-  height: 62rem;
-}
-
-.sobre__titulo {
-  font-weight: 500;
-  font-size: 3.5rem;
-  padding: 0.5em;
-}
-
-.sobre__paragrafo {
-  font-weight: 300;
-  font-size: 1em;
-  padding: 1rem 12rem 4rem 12rem;
-  width: 100%;
-  height: 200px;
-  text-align: justify;
-}
-
-.article__container {
-  padding: 0 4rem 0 4rem;
-}
-
-/* ==========================NOTICIAS======================-=== */
-.noticias__container {
-  width: 100%;
-  height: 62rem;
-  padding-top: 2rem;
-}
-
-.noticias__header {
-  margin-bottom: 30px;
-  width: 100%;
-  height: 6.5em;
-  padding: 0 5em 0 5em ;
-  box-shadow: 0 5px 40px rgba(0, 0, 0, .2);
-  border: none;
-  border-radius: 4px;
-  margin-top: -30px;
-  background: #e9e9e9;
-  z-index: 1;
-}
-
-.noticias__barra {
-  gap: 16px;
-  height: 5em;
-}
-
-.noticias__barra h1 {
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 25px;
-  color: #000;
-  padding-top: 15px;
-  position: relative;
-  padding-top: 3.5rem;
-}
-
-.noticias__cards {
-  display: flex;
-  width: 100%;
-  height: 12.5em;
-  padding: 0 10em 0 10em;
-  gap: 3rem;
-}
-
-.noticias__cards img {
-  width: 100%;
-  height: 10em;
-  border-radius: 5px;
-  box-shadow: 0 5px 40px rgba(0, 0, 0, .2);
-}
-
-.noticias__cards h1 {
-  padding-top: 1em;
-  font-size: 20px;
-  font-weight: 500;
-  color: #2c2c2c;
-}
-
-.noticias__cards p {
-  padding-top: 1em;
-  font-size: 16px;
-  font-weight: 300;
-  color: #2c2c2c;
-}
-
-.noticias__cards a {
-  cursor: default;
-}
-
-.noticias__cards a:hover {
-  filter: brightness(90%);
-}
-
-.noticias__descricao a{
-  text-decoration: none;
-}
-.noticias__descricao a:hover {
-  opacity: 90%;
-}
-
-
-/* ==========================MOEDAS======================-=== */
-.moedas__container {
-  width: 100%;
-  height: 62rem;
-  text-align: center;
-}
-
-
-.moedas__descricao {
-  text-transform: uppercase;
-  font-weight: 500;
-  font-size: 3.5rem;
-  padding: 0.5em;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.copy {
-  margin: 0;
-  font-size: 16px;
-  color: #F2EcFF;
-  align-items: start;
-  justify-content: start;
-}
-
-.copy i {
-  font-size: 2rem;
-  color: #F2EcFF;
-
-}
-
-.copy a {
-  text-decoration: none;
-}
-
-.footer__site {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 20rem;
-  background-color: rgba(0, 0, 0, 0.959);
-  display: flex;
-}
